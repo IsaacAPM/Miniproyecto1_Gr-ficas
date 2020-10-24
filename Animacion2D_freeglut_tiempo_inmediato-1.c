@@ -3,6 +3,7 @@
 #include <GL/glew.h>
 #include <GL/freeglut.h>
 #include <GL/gl.h>
+#include <GL/glu.h>
 #include <stdio.h>
 
 // Variables para controlar la animación
@@ -71,7 +72,7 @@ void dibuja() {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
     //Carga de imagen y acoplamiento a profundidad
-    unsigned char* data = stbi_load("C:/Users/wpere/Desktop/Wilmer/ITAM/Docencia/Grafica/Librerias/images/Fachada.jpg", &width, &height, &nrChannels, 0);
+    unsigned char* data = stbi_load("C:\\Users\\Public\\Pictures\\ImagenPrueba.jpg", &width, &height, &nrChannels, 0);
     if (data)
     {
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
